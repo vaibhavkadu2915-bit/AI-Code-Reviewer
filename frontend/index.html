@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Code Reviewer</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                &lt;/&gt;
+            </div>
+
+            <div>
+                <h1>AI Code Reviewer</h1>
+                <p>Intelligent code analysis</p>
+            </div>
+
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            AI Ready
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-container">
+
+        <!-- Page heading -->
+
+        <section class="hero">
+
+            <div>
+                <span class="badge">AI POWERED</span>
+
+                <h2>Review your code with AI</h2>
+
+                <p>
+                    Paste your code below and get instant feedback,
+                    explanations, suggestions and corrected code.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= WORKSPACE ================= -->
+
+        <section class="workspace">
+
+
+            <!-- ================= CODE PANEL ================= -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div class="panel-title">
+
+                        <span class="panel-icon">&lt;/&gt;</span>
+
+                        <div>
+                            <h3>Your Code</h3>
+                            <span>Paste or write your code</span>
+                        </div>
+
+                    </div>
+
+                    <span class="language">
+                        JavaScript
+                    </span>
+
+                </div>
+
+
+                <div class="editor-wrapper">
+
+                    <div class="line-numbers">
+                        1<br>
+                        2<br>
+                        3<br>
+                        4<br>
+                        5<br>
+                        6<br>
+                        7<br>
+                        8<br>
+                        9<br>
+                        10
+                    </div>
+
+                    <textarea
+                        id="codeInput"
+                        spellcheck="false"
+                        placeholder="// Write or paste your code here...
+
+function add(a, b) {
+    return a + b;
+}"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="editor-footer">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span id="characterCount">
+                        0 characters
+                    </span>
+
+                </div>
+
+
+                <button id="reviewButton" class="review-button">
+
+                    <span class="button-icon">✦</span>
+
+                    <span id="buttonText">
+                        Review Code
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= REVIEW PANEL ================= -->
+
+            <div class="panel review-panel">
+
+                <div class="panel-header">
+
+                    <div class="panel-title">
+
+                        <span class="panel-icon review-icon">
+                            ✦
+                        </span>
+
+                        <div>
+                            <h3>AI Review</h3>
+                            <span>Analysis and suggestions</span>
+                        </div>
+
+                    </div>
+
+                    <span class="ai-badge">
+                        GEMINI
+                    </span>
+
+                </div>
+
+
+                <div id="result" class="review-content">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            ✦
+                        </div>
+
+                        <h3>No review yet</h3>
+
+                        <p>
+                            Enter your code on the left and click
+                            <strong>Review Code</strong> to get an AI-powered analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h4>Bug Detection</h4>
+                    <p>Find potential errors and logical problems.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ≡
+                </div>
+
+                <div>
+                    <h4>Clear Explanation</h4>
+                    <p>Understand what is wrong and why.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ↗
+                </div>
+
+                <div>
+                    <h4>Improvement Tips</h4>
+                    <p>Get practical suggestions for better code.</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            AI Code Reviewer &nbsp;•&nbsp; Built with Node.js, Express & Gemini
+        </p>
+
+    </footer>
+
+
+    <!-- Marked Markdown Renderer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Your JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
